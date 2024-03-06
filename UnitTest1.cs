@@ -57,7 +57,7 @@ public class Tests : PageTest
         // Create a new browser instance with headless set to false.
         var browser = await Playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
         {
-            Headless = false // This will run the browser in headless mode.
+            Headless = true // This will run the browser in headless mode.
         });
 
         // Create a new context with the specified credentials and headers.       
