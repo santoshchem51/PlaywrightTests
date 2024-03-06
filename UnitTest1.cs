@@ -60,13 +60,12 @@ public class Tests : PageTest
             Headless = false // This will run the browser in headless mode.
         });
 
-        // Create a new context with the specified credentials and headers.
+        // Create a new context with the specified credentials and headers.       
+
         var context = await browser.NewContextAsync(new BrowserNewContextOptions()
         {
             HttpCredentials = credentials,
-            ExtraHTTPHeaders = headers,
-            RecordVideoDir = "videos",
-            RecordVideoSize = new RecordVideoSize { Width = 1280, Height = 720 }
+            ExtraHTTPHeaders = headers            
         });
 
         await context.Tracing.StartAsync(new TracingStartOptions()
